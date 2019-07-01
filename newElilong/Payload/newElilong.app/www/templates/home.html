@@ -1,0 +1,108 @@
+<ion-view title={{DisplayingDate}}>
+  <ion-content class="padding has-header">
+    <div class="row" style="height: 15px;">
+    </div>
+    <div class="row">
+      <div class="col">廠內庫存</div>
+      <div class="col"> {{Inventory | number}} KG</div>
+      <div class="col">合約未交</div>
+      <div class="col"> {{UnSaleContract | number}} KG</div>
+    </div>
+    <div class="row">
+      <div class="col">廠內庫存平均價格</div>
+      <div class="col"> {{InventoryPrice | number}} </div>
+      <div class="col">合約未交平均價格</div>
+      <div class="col"> {{UnSaleContractPrice | number}} </div>
+    </div>
+    <div class="row">
+      <div class="col">採購未進</div>
+      <div class="col"> {{PurchaseUnIn | number}} KG</div>
+      <div class="col">訂單未交</div>
+      <div class="col"> {{UnSaleOrder | number}} KG</div>
+    </div>
+    <div class="row">
+      <div class="col">採購未進平均價格</div>
+      <div class="col"> {{PurchaseUnInPrice | number}} </div>
+      <div class="col">訂單未交平均價格</div>
+      <div class="col"> {{UnSaleOrderPrice | number}} </div>
+    </div>
+    <div class="row">
+      <div class="col">借出總量</div>
+      <div class="col"> {{LendOut | number}} KG</div>
+      <div class="col">借入總量</div>
+      <div class="col"> {{BorrowIn | number}} KG</div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">+</div>
+      <div class="col"> {{PositiveSum | number}} KG</div>
+      <div class="col" style="text-align:center">-</div>
+      <div class="col"> {{NegativeSum | number}} KG</div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">更新時間</div>
+      <div class="col" style="text-align:center"> {{ ModifityDate }} </div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">{{TotalWeight | number}} KG</div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="button button-full button-calm" ng-click="PreviousDay()">
+          前一天
+        </button>
+      </div>
+      <div class="col">
+        <button class="button button-full button-assertive" ng-click="BackToday()">
+          今日
+        </button>
+      </div>
+      <div class="col">
+        <button class="button button-full button-calm" ng-click="NextDay()">
+          下一天
+        </button>
+      </div>
+      <div></div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">每日牌價 {{TodayPrice | number}} 元</div>
+    </div>
+    <div class="row">
+      <div class="col">
+        每日訂單
+      </div>
+      <div class="col">
+        每日銷貨
+      </div>
+      <div class="col">
+        每日採購
+      </div>
+      <!-- 易利隆版本暫時先拿掉 by Tiger -->
+      <!-- <div class="col">
+        每日裁剪
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">
+        <!-- 每日訂單 -->
+        <button class="button button-clear button-balanced">
+          {{TodayOrder }}
+        </button>
+      </div>
+      <div class="col" style="text-align:center">
+        <!-- 每日銷貨 -->
+        <button class="button button-clear button-balanced">
+          {{TodaySale }}
+        </button>
+      </div>
+      <div class="col" style="text-align:center">
+        <!-- 每日採購 -->
+        <button class="button button-clear button-balanced">
+          {{TodayPurchase }}
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align:center">重量單位為 KG</div>
+    </div>
+  </ion-content>
+</ion-view>

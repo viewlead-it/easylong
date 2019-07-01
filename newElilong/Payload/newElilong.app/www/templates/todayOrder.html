@@ -1,0 +1,14 @@
+<ion-view view-title="訂單">
+  <ion-content class="padding">
+    <button class="button button-positive button-block" style="margin: 0;" ng-click="openDatePicker()">請選擇日期
+    </button>
+    <div class="list">
+      <div class="item" ng-repeat="rec in records">
+        <h2>客戶：{{rec.CusName}}</h2>
+        <span class="badge badge-assertive">{{rec.TotalWeight}}&nbspKG</span>
+        <h2>專案名稱：{{rec.OrderCase}}</h2>
+        <h3>工地地址：{{rec.ConstructionAddress}}</h3>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

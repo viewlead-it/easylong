@@ -1,0 +1,16 @@
+<ion-view view-title="{{title}}">
+  <ion-content class="padding">
+    <div class="list">
+      <div ng-repeat="item in list">
+        <label class="item item-divider">
+          <h2>{{item.name}}</h2>
+          <h6>{{item.topic}}</h6>
+          <input type="checkbox" ng-model="item.show" style="display:none"></input>
+        </label>
+        <div class="item item-text-wrap" ng-show="item.show">
+          {{item.message}}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view view-title="{{showDate}} 寄庫清單">
+  <ion-content class="padding">
+    <button class="button button-positive button-block" style="margin: 0;" ng-click="openDatePicker()">請選擇日期
+    </button>
+    <div class="list">
+      <div class="item" ng-repeat="rec in records">
+        <h2>客戶：{{rec.CustomerMaster.fullName}}</h2>
+        <span class="badge badge-assertive">{{rec.weight}}&nbspKG</span>
+        <h2>單號：{{rec.code}}</h2>
+        <h3>寄庫類型：{{rec.ConsignmentType.name}}</h3>
+        <h3>狀態：{{rec.StatusCode.name}}</h3>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

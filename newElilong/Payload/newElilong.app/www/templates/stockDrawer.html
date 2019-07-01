@@ -1,0 +1,17 @@
+<ion-view view-title="儲位清單">
+  <ion-content class="padding">
+    <div class="list">
+      <div ng-repeat="item in list">
+        <label class="item item-divider" ng-click="getStockInfo(item,$index)">
+          <h2>{{item.name}}</h2>
+        </label>
+        <div class="item item-text-wrap" ng-show="item.show">
+          <ul ng-repeat="drawer in item.stockDrawerInfo">
+            <li>鋼筋：{{drawer.name}}，數量：{{drawer.StockDrawers[0].amount}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
