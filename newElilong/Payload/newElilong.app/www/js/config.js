@@ -1,7 +1,0 @@
-var SERVER_CONFIG = {
-  PROTOCOL:'http://',
-  ADDR:'35.229.241.156',
-  PATH:'/EzWebService/Service1.svc/',
-  NEWSERVICE:'104.155.210.57:9100/',
-  BRIDGE:'35.229.241.156:8080/'
-}
